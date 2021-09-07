@@ -1,1 +1,2 @@
 Django==3.2.7
+djangorestframework-simplejwt==4.8.0
