@@ -11,7 +11,9 @@ RUN apk update \
     && apk add --virtual build-deps gcc python3-dev musl-dev libffi-dev libressl-dev openssl-dev \
     && apk add postgresql-dev \
     && pip install psycopg2 \
-    && apk del build-deps
+    && apk del build-deps \
+    && apk add xvfb \
+    && apk add wkhtmltopdf
 
 # copy requirements.txt
 COPY requirements.txt /app/
